@@ -7,7 +7,7 @@ variable "pvt_key" {
 }
 
 variable "sg-id" {
-  default = "sg-0154e36a86dd411b2"
+  default = "sg-0fdd650ca717f16fa"
 }
 
 variable "ami-id" {
