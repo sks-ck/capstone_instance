@@ -11,5 +11,5 @@ variable "sg-id" {
 }
 
 variable "ami_id" {
-  default = "ami-0620d12a9cf777c87"
+  default = "ami-0fc20dd1da406780b"
 }
