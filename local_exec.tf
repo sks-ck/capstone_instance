@@ -32,7 +32,3 @@ resource "null_resource" "remote-exec-1" {
     ]
   }
 }
-
-
-
-
