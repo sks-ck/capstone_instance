@@ -10,7 +10,6 @@ provider "aws" {
   }
 
 resource "aws_instance" "backend" {
-  count                  = "${var.instance_count}"
   ami                    = "${var.ami_id}"
   instance_type          = "t2.micro"
   key_name               = "${var.key_name}"
