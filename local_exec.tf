@@ -10,12 +10,12 @@ provider "aws" {
   }
 
 resource "aws_instance" "backend" {
-  
+  count                  = "${var.instance_count}"
   ami                    = "${var.ami_id}"
   instance_type          = "t2.micro"
   key_name               = "${var.key_name}"
   vpc_security_group_ids = ["${var.sg-id}"]
-  count                  = "${var.instance_count}"
+  
 
 }
 resource "null_resource" "remote-exec-1" {
