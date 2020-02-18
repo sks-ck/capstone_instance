@@ -1,0 +1,13 @@
+node {
+    stage('Git-Checkout') {
+   git 'https://github.com/surajkumarsahoo/capstone_instance.git'
+  }
+ 
+   stage('instance create on AWS'){
+    
+   sh label: 'terraform', script: '/bin/terraform  init'
+   sh label: 'terraform', script: '/bin/terraform destroy -input=false -auto-approve'
+   sh label: 'terraform', script: '/bin/terraform apply -input=false -auto-approve'
+   }
+
+}
