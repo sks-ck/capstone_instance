@@ -6,7 +6,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "${aws_region}"
+  region = "${var.aws_region}"
   }
 
 resource "aws_instance" "backend" {
